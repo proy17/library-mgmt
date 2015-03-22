@@ -1,0 +1,28 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <table class="table">
+               <caption>Book Search results</caption>
+               <thead>
+                  <tr>
+                     <th>Author</th>
+                     <th>BookName</th>
+                     <th>Language</th>
+                  </tr>
+               </thead>
+                <tbody>
+                    <tr ng-repeat="book in books | filter:query | orderBy:orderProp">
+                        <td><a href="#/books/{{book.BookName}}">{{book.BookName}}</a></td>
+                        <td>{{book.Author}}</td>
+                        <td>{{book.Language}}</td>
+                        <td><a href="#/borrow/{{book.ID}}">Borrow</a></td>
+                    </tr>            
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
